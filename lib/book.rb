@@ -12,4 +12,8 @@ class Book
   def author
     "#{@book_info[:author_first_name]} #{@book_info[:author_last_name]}"
   end
+
+  def publication_year
+    @book_info[:publication_date][-4..-1]
+  end
 end
