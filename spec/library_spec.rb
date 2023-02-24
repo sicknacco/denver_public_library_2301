@@ -6,6 +6,7 @@ require './lib/library'
 RSpec.describe Library do
   before(:each) do
     @dpl = Library.new("Denver Public Library")
+    @charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
   end
 
   it 'exists' do
@@ -22,5 +23,12 @@ RSpec.describe Library do
 
   it 'starts with no authors' do
     expect(@dpl.authors).to eq([])
+  end
+
+  it 'can add authors and books to collection' do
+    @dpl.add_author(@charlotte_bronte)
+
+    expect(@dpl.authors).to include(@charlotte_bronte)
+    expect(@dpl.books).to include(@jane_eyre)
   end
 end
