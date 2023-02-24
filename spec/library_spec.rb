@@ -7,6 +7,8 @@ RSpec.describe Library do
   before(:each) do
     @dpl = Library.new("Denver Public Library")
     @charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+    @jane_eyre = @charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+    @villette = @charlotte_bronte.write("Villette", "1853")
   end
 
   it 'exists' do
@@ -30,5 +32,11 @@ RSpec.describe Library do
 
     expect(@dpl.authors).to include(@charlotte_bronte)
     expect(@dpl.books).to include(@jane_eyre)
+  end
+
+  it 'can see author publication time frame' do
+    @dpl.add_author(@charlotte_bronte)
+
+    expect(@dpl.publication_time_frame_for(@charlotte_bronte)).to eq({:start=>"1847", :end=>"1853"})
   end
 end
