@@ -13,4 +13,11 @@ class Library
     @authors << author
     @books << author.books.flatten!
   end
+
+  # def publication_time_frame_for(author)
+  #   publication_years = author.books.each do |book|
+  #     book.publication_year
+
+  #   end
+  # end
 end
