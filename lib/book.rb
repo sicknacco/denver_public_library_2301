@@ -8,4 +8,8 @@ class Book
   def title
     @book_info[:title]
   end
+
+  def author
+    "#{@book_info[:author_first_name]} #{@book_info[:author_last_name]}"
+  end
 end
