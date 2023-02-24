@@ -15,7 +15,7 @@ RSpec.describe Author do
     expect(@charlotte_bronte.name).to eq("Charlotte Bronte")
   end
 
-  xit 'starts with no books' do
+  it 'starts with no books' do
     expect(@charlotte_bronte.books).to eq([])
   end
 end

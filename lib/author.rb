@@ -1,8 +1,10 @@
 class Author
-  attr_reader :author_info
+  attr_reader :author_info,
+              :books
 
   def initialize(author_hash)
     @author_info = author_hash
+    @books = []
   end
 
   def name
