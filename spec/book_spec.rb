@@ -9,4 +9,16 @@ RSpec.describe Book do
   it 'exists' do
     expect(@book).to be_an_instance_of(Book)
   end
+
+  it 'has a title' do
+    expect(@book.title).to eq("To Kill a Mockingbird")
+  end
+
+  xit 'has an author' do
+    expect(@book.author).to eq("Harper Lee")
+  end
+
+  xit 'has a puplication year' do
+    expect(@book.publication_year).to eq("1960")
+  end
 end
