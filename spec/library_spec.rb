@@ -20,7 +20,7 @@ RSpec.describe Library do
     expect(@dpl.books).to eq([])
   end
 
-  xt 'starts with no authors' do
+  it 'starts with no authors' do
     expect(@dpl.authors).to eq([])
   end
 end
