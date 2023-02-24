@@ -1,3 +1,5 @@
 class Library
- 4
+  def initialize(name)
+
+  end
 end
